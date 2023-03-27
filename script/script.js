@@ -5,11 +5,11 @@ function alertUser() {
   //buttonRef.removeEventListener("click", alertUser);
 }
 
-// buttonRef.addEventListener("click", alertUser, {
-//   capture: true,
-//   once: true,
-//   passive: true,
-// });
+buttonRef.addEventListener("click", alertUser, {
+  capture: true,
+  once: true,
+  passive: true,
+});
 
 function changeBgdColor() {
   // 1. change background color to pink
@@ -29,3 +29,16 @@ function changeBtnName() {
 }
 
 buttonRef.addEventListener("click", changeBtnName);
+
+function updateImage() {
+  const image = document.querySelector("#shoppingCart");
+  image.setAttribute(
+    "src",
+    "images/shoppingCart.png"
+    // "https://cdn-icons-png.flaticon.com/512/263/263142.png"
+  );
+  image.setAttribute("alt", "shopping Cart");
+  image.setAttribute("height", 50);
+  image.setAttribute("width", 50);
+}
+updateImage();
